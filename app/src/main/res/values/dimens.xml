@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="std_size">8dp</dimen>
+    <dimen name="double_size">16dp</dimen>
+    <dimen name="back_icon_size">32dp</dimen>
+    <dimen name="headingFontSize">22sp</dimen>
+    <dimen name="brandFontSize">18sp</dimen>
+    <dimen name="regularFontSize">14sp</dimen>
+    <dimen name="primaryFontSize">16sp</dimen>
+    <dimen name="tiny_size">4dp</dimen>
+    <dimen name="regular_icon_size">24dp</dimen>
+</resources>

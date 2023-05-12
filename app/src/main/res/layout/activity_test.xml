@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/double_size"
+    android:paddingStart="@dimen/double_size"
+    android:paddingEnd="@dimen/double_size"
+    android:background="@drawable/general_background"
+    tools:context=".TestActivity">
+
+    <LinearLayout
+        android:id="@+id/custom_actionbar"
+        android:layout_width="wrap_content"
+        android:layout_height="?actionBarSize"
+        android:gravity="center"
+        android:onClick="goBack"
+        android:orientation="horizontal"
+        android:padding="4dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/back_icon_size"
+            android:layout_height="@dimen/back_icon_size"
+            android:src="@drawable/ic_back_icon" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|start"
+        android:text="Prescribe"
+        android:textColor="@color/secondaryFontColor"
+        android:textSize="@dimen/headingFontSize"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/double_size"
+        android:gravity="center|start"
+        android:text="Diagnostic Tests"
+        android:textColor="@color/secondaryFontColor"
+        android:textSize="@dimen/regularFontSize"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/std_size">
+
+        <AutoCompleteTextView
+            android:id="@+id/testNameACTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/std_size"
+            android:background="@drawable/edit_text_background"
+            android:padding="@dimen/std_size"
+            android:gravity="center"
+            android:autofillHints="X-Ray"
+            android:hint="Please Suggest a Test"
+            android:inputType="textAutoCorrect"
+            android:maxEms="1"
+            android:textColor="@color/primaryFontColor"
+            android:textSize="@dimen/regularFontSize" />
+
+
+    </LinearLayout>
+
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_margin="@dimen/double_size"
+        android:background="@drawable/next_button_background"
+        android:elevation="10dp"
+        android:onClick="submit"
+        android:text="Save &amp; Prescribe"
+        android:textColor="@color/black" />
+
+</LinearLayout>

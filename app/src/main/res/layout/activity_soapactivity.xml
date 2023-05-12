@@ -1,0 +1,929 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/general_background"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/double_size"
+    android:paddingTop="@dimen/double_size"
+    android:paddingEnd="@dimen/double_size"
+    tools:context=".SOAPActivity">
+
+    <LinearLayout
+        android:id="@+id/custom_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:onClick="goBack"
+        android:orientation="horizontal"
+        android:padding="4dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/back_icon_size"
+            android:layout_height="@dimen/back_icon_size"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_back_icon" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/cancelButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/std_size"
+            android:background="@drawable/edit_text_background"
+            android:backgroundTint="@color/white"
+            android:drawableEnd="@drawable/ic_cancel"
+            android:drawablePadding="@dimen/std_size"
+            android:elevation="10dp"
+            android:paddingStart="@dimen/double_size"
+            android:paddingEnd="@dimen/double_size"
+            android:text="Cancel"
+            android:textSize="@dimen/regularFontSize" />
+
+    </LinearLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/std_size"
+
+        android:clickable="true"
+        android:focusable="true"
+        app:cardCornerRadius="@dimen/std_size"
+        app:cardElevation="@dimen/tiny_size">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/std_size">
+
+            <TextView
+                android:id="@+id/nameTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Al Hasan"
+                android:textColor="@color/black"
+                android:textSize="@dimen/headingFontSize"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/patientIdTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="hasan@example.com"
+                android:textColor="@color/black"
+                android:textSize="@dimen/brandFontSize"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/ageGenderTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Male, 27 Yrs"
+                android:textColor="@color/black"
+                android:textSize="@dimen/primaryFontSize"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/divisionTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Dhaka, Bangladesh"
+                android:textColor="@color/black"
+                android:textSize="@dimen/primaryFontSize"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/phoneTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="+8801521200318"
+                android:textColor="@color/black"
+                android:textSize="@dimen/primaryFontSize"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/std_size"
+        android:layout_marginBottom="@dimen/std_size"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/callingMethodCV"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/std_size"
+            android:layout_weight="1"
+            app:cardCornerRadius="@dimen/std_size"
+            app:cardElevation="@dimen/tiny_size">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/tiny_size">
+
+                <TextView
+                    android:id="@+id/callingMethodTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/tiny_size"
+                    android:text="Initiate Video Call"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/primaryFontSize"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/email_login_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/complaintsSymptomsCV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/std_size"
+                android:layout_weight="1"
+
+                android:clickable="true"
+                android:focusable="true"
+
+                app:cardCornerRadius="@dimen/std_size"
+                app:cardElevation="@dimen/tiny_size">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/symptomsEditTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/double_size"
+                        android:gravity="center"
+                        android:text="Complaint &amp; Symptoms"
+                        android:textColor="@color/secondaryFontColor"
+                        android:textSize="@dimen/regularFontSize"
+                        android:textStyle="bold"
+                        app:drawableEndCompat="@drawable/ic_edit_icon" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/double_size"
+                        android:layout_marginEnd="@dimen/double_size"
+                        android:gravity="center|start"
+                        android:text="Chief Complaint"
+                        android:textColor="@color/secondaryFontColor"
+                        android:textSize="@dimen/regularFontSize"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/chiefComplaintTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/double_size"
+                        android:layout_marginEnd="@dimen/double_size"
+                        android:gravity="center|start"
+                        android:text="Runny Nose, Soar Throat"
+                        android:textColor="@color/secondaryFontColor"
+                        android:textSize="@dimen/regularFontSize"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/double_size"
+                        android:layout_marginTop="@dimen/double_size"
+                        android:layout_marginEnd="@dimen/double_size"
+                        android:gravity="center|start"
+                        android:text="Symptoms"
+                        android:textColor="@color/secondaryFontColor"
+                        android:textSize="@dimen/regularFontSize"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/symptomsTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/double_size"
+                        android:layout_marginEnd="@dimen/double_size"
+                        android:layout_marginBottom="@dimen/double_size"
+                        android:gravity="center|start"
+                        android:text="Runny Nose, Soar Throat, Fever, Snezzing"
+                        android:textColor="@color/secondaryFontColor"
+                        android:textSize="@dimen/regularFontSize"
+                        android:textStyle="normal" />
+
+
+                </LinearLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/std_size"
+                android:layout_weight="1"
+                android:backgroundTint="@color/white"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardCornerRadius="@dimen/std_size"
+                app:cardElevation="@dimen/tiny_size">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/medicalHistoryEditTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/double_size"
+                        android:gravity="center"
+                        android:text="Medical History"
+                        android:textColor="@color/secondaryFontColor"
+                        android:textSize="@dimen/primaryFontSize"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/double_size"
+                        android:layout_marginEnd="@dimen/double_size"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:gravity="center|start"
+                            android:text="Medical Condition"
+                            android:textColor="@color/secondaryFontColor"
+                            android:textSize="@dimen/regularFontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text=":"
+                            android:textColor="@color/secondaryFontColor"
+                            android:textSize="@dimen/regularFontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/medicalConditionTV"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:gravity="center|start"
+                            android:text="Asthma, High BP"
+                            android:textColor="@color/secondaryFontColor"
+                            android:textSize="@dimen/regularFontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/double_size"
+                        android:layout_marginTop="@dimen/tiny_size"
+                        android:layout_marginEnd="@dimen/double_size"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:gravity="center|start"
+                            android:text="Allergies"
+                            android:textColor="@color/secondaryFontColor"
+                            android:textSize="@dimen/regularFontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text=":"
+                            android:textColor="@color/secondaryFontColor"
+                            android:textSize="@dimen/regularFontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/allergyTV"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:gravity="center|start"
+                            android:text="Dust"
+                            android:textColor="@color/secondaryFontColor"
+                            android:textSize="@dimen/regularFontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/double_size"
+                        android:layout_marginTop="@dimen/tiny_size"
+                        android:layout_marginEnd="@dimen/double_size"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:gravity="center|start"
+                            android:text="Family History"
+                            android:textColor="@color/secondaryFontColor"
+                            android:textSize="@dimen/regularFontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text=":"
+                            android:textColor="@color/secondaryFontColor"
+                            android:textSize="@dimen/regularFontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/familyHistoryTV"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:gravity="center|start"
+                            android:text="Asthma, Diabeties"
+                            android:textColor="@color/secondaryFontColor"
+                            android:textSize="@dimen/regularFontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/double_size"
+                        android:layout_marginTop="@dimen/tiny_size"
+                        android:layout_marginEnd="@dimen/double_size"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:gravity="center|start"
+                            android:text="Personal History"
+                            android:textColor="@color/secondaryFontColor"
+                            android:textSize="@dimen/regularFontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text=":"
+                            android:textColor="@color/secondaryFontColor"
+                            android:textSize="@dimen/regularFontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/personalHistoryTV"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:gravity="center|start"
+                            android:text="Covid19"
+                            android:textColor="@color/secondaryFontColor"
+                            android:textSize="@dimen/regularFontSize" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/double_size"
+                        android:layout_marginTop="@dimen/tiny_size"
+                        android:layout_marginEnd="@dimen/double_size"
+                        android:layout_marginBottom="@dimen/double_size"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:gravity="center|start"
+                            android:text="Medication"
+                            android:textColor="@color/secondaryFontColor"
+                            android:textSize="@dimen/regularFontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text=":"
+                            android:textColor="@color/secondaryFontColor"
+                            android:textSize="@dimen/regularFontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/preMedicationTV"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:gravity="center|start"
+                            android:text="Monas 10mg"
+                            android:textColor="@color/secondaryFontColor"
+                            android:textSize="@dimen/regularFontSize" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/std_size"
+                android:layout_weight="1"
+                android:backgroundTint="@color/white"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardCornerRadius="@dimen/std_size"
+                app:cardElevation="@dimen/tiny_size">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/vitalSignEditTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/double_size"
+                        android:gravity="center"
+                        android:text="Vital Sign"
+                        android:textColor="@color/secondaryFontColor"
+                        android:textSize="@dimen/regularFontSize"
+                        android:textStyle="bold"
+                        app:drawableEndCompat="@drawable/ic_edit_icon" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/double_size"
+                        android:layout_marginEnd="@dimen/double_size"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:gravity="center|start"
+                            android:text="BP"
+                            android:textColor="@color/secondaryFontColor"
+                            android:textSize="@dimen/regularFontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text=":"
+                            android:textColor="@color/secondaryFontColor"
+                            android:textSize="@dimen/regularFontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/bpTV"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:gravity="center|start"
+                            android:text="80/125"
+                            android:textColor="@color/secondaryFontColor"
+                            android:textSize="@dimen/regularFontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/double_size"
+                        android:layout_marginTop="@dimen/tiny_size"
+                        android:layout_marginEnd="@dimen/double_size"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:gravity="center|start"
+                            android:text="Temp"
+                            android:textColor="@color/secondaryFontColor"
+                            android:textSize="@dimen/regularFontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text=":"
+                            android:textColor="@color/secondaryFontColor"
+                            android:textSize="@dimen/regularFontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/temperatureTV"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:gravity="center|start"
+                            android:text="98"
+                            android:textColor="@color/secondaryFontColor"
+                            android:textSize="@dimen/regularFontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/double_size"
+                        android:layout_marginTop="@dimen/tiny_size"
+                        android:layout_marginEnd="@dimen/double_size"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:gravity="center|start"
+                            android:text="Pulse"
+                            android:textColor="@color/secondaryFontColor"
+                            android:textSize="@dimen/regularFontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text=":"
+                            android:textColor="@color/secondaryFontColor"
+                            android:textSize="@dimen/regularFontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/pulseTV"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:gravity="center|start"
+                            android:text="75"
+                            android:textColor="@color/secondaryFontColor"
+                            android:textSize="@dimen/regularFontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/double_size"
+                        android:layout_marginTop="@dimen/tiny_size"
+                        android:layout_marginEnd="@dimen/double_size"
+                        android:layout_marginBottom="@dimen/double_size"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:gravity="center|start"
+                            android:text="Breathing Rate"
+                            android:textColor="@color/secondaryFontColor"
+                            android:textSize="@dimen/regularFontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text=":"
+                            android:textColor="@color/secondaryFontColor"
+                            android:textSize="@dimen/regularFontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/breathingTV"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:gravity="center|start"
+                            android:text="Difficulty Breathing"
+                            android:textColor="@color/secondaryFontColor"
+                            android:textSize="@dimen/regularFontSize" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/std_size"
+                android:layout_weight="1"
+                android:backgroundTint="@color/white"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardCornerRadius="@dimen/std_size"
+                app:cardElevation="@dimen/tiny_size">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/double_size"
+                        android:gravity="center"
+                        android:text="Recommendations"
+                        android:textColor="@color/secondaryFontColor"
+                        android:textSize="@dimen/primaryFontSize"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/double_size"
+                        android:layout_marginEnd="@dimen/double_size"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:gravity="center|start"
+                            android:text="Provisional Diagnosis"
+                            android:textColor="@color/secondaryFontColor"
+                            android:textSize="@dimen/regularFontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text=":"
+                            android:textColor="@color/secondaryFontColor"
+                            android:textSize="@dimen/regularFontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/provisionalDiagnoseTV"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:gravity="center|start"
+                            android:text="Dust Allergy"
+                            android:textColor="@color/secondaryFontColor"
+                            android:textSize="@dimen/regularFontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/double_size"
+                        android:layout_marginEnd="@dimen/double_size"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:gravity="center|start"
+                            android:text="Recommended Diagnostics"
+                            android:textColor="@color/secondaryFontColor"
+                            android:textSize="@dimen/regularFontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text=":"
+                            android:textColor="@color/secondaryFontColor"
+                            android:textSize="@dimen/regularFontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/recommendedTestTV"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:gravity="center|start"
+                            android:text="None"
+                            android:textColor="@color/secondaryFontColor"
+                            android:textSize="@dimen/regularFontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/double_size"
+                        android:layout_marginTop="@dimen/tiny_size"
+                        android:layout_marginEnd="@dimen/double_size"
+                        android:orientation="horizontal">
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/double_size"
+                        android:layout_marginTop="@dimen/tiny_size"
+                        android:layout_marginEnd="@dimen/double_size"
+                        android:layout_marginBottom="@dimen/double_size"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:gravity="center|start"
+                            android:text="Recommended Medicines"
+                            android:textColor="@color/secondaryFontColor"
+                            android:textSize="@dimen/regularFontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text=":"
+                            android:textColor="@color/secondaryFontColor"
+                            android:textSize="@dimen/regularFontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/recommendedMedicineTV"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:gravity="center|start"
+                            android:text="Montilucast"
+                            android:textColor="@color/secondaryFontColor"
+                            android:textSize="@dimen/regularFontSize" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/std_size"
+                android:layout_weight="1"
+                android:backgroundTint="@color/white"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardCornerRadius="@dimen/std_size"
+                app:cardElevation="@dimen/tiny_size">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/double_size"
+                        android:gravity="center"
+                        android:text="Disclaimer"
+                        android:textColor="@color/secondaryFontColor"
+                        android:textSize="@dimen/primaryFontSize"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/double_size"
+                        android:layout_marginEnd="@dimen/double_size"
+                        android:layout_marginBottom="@dimen/double_size"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:gravity="center|start"
+                            android:text="Please note that is disclaimer"
+                            android:textColor="@color/secondaryFontColor"
+                            android:textSize="@dimen/regularFontSize" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/std_size"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/nextButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginStart="@dimen/std_size"
+                    android:layout_marginEnd="@dimen/std_size"
+                    android:layout_marginBottom="@dimen/tiny_size"
+                    android:layout_weight="1"
+                    android:onClick="next"
+                    android:background="@drawable/next_button_background"
+                    android:elevation="10dp"
+                    android:text="Next"
+                    android:textColor="@color/black" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
