@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(getApplicationContext(), SymptomActivity.class));
+                startActivity(new Intent(getApplicationContext(), ChooseActivity.class));
                 finish();
             }
         }, SPLASH_TIMEOUT);
